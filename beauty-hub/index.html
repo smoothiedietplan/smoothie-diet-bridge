@@ -3,111 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aura Beauty — Products We Love | Skincare, Makeup & Glow</title>
-<meta name="description" content="The beauty products aura beauty actually recommends — starting with Advanced Collagen Plus. Skincare, makeup & glow routines for real skin.">
+<title>Advanced Collagen Plus — Glow From Within | aura beauty</title>
+<meta name="description" content="Advanced Collagen Plus: 5 collagen types + biotin for skin, hair & nails. 11g collagen per scoop, 90-day money-back guarantee. One-time payment, no subscription.">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: Georgia, 'Times New Roman', serif; background: #fdf6f3; color: #3d2b2b; line-height: 1.6; }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 60px; }
-  header { text-align: center; padding: 44px 0 28px; background: linear-gradient(135deg, #fbe9e4, #f6d9d3 55%, #f3e2c9); border-bottom: 3px solid #c9a24b; }
-  header img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #c9a24b; object-fit: cover; background: #fff; }
-  header h1 { font-size: 2.1em; color: #8e3b4d; margin-top: 12px; font-style: italic; letter-spacing: 1px; }
-  header p { color: #6b4a4a; font-size: 1.05em; }
-  .social { margin-top: 14px; font-size: .95em; }
-  .social a { color: #8e3b4d; margin: 0 10px; text-decoration: none; font-weight: bold; }
-  h2 { color: #8e3b4d; font-size: 1.5em; margin: 36px 0 6px; text-align: center; }
-  .sub { text-align: center; color: #6b4a4a; margin-bottom: 24px; }
-  .card { background: #fff; border-radius: 18px; box-shadow: 0 6px 24px rgba(142,59,77,.12); overflow: hidden; border: 1px solid #f0d9d3; }
-  .card img.hero { width: 100%; display: block; }
-  .card-body { padding: 28px; }
-  .badge { display: inline-block; background: #8e3b4d; color: #fff; font-size: .8em; letter-spacing: 1px; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; }
-  .card h3 { font-size: 1.6em; color: #8e3b4d; margin: 12px 0 4px; }
-  .tagline { color: #6b4a4a; font-style: italic; margin-bottom: 16px; }
-  .card ul { margin: 0 0 18px 20px; }
-  .card li { margin-bottom: 6px; }
-  .packs { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
-  .pack { flex: 1; min-width: 150px; border: 2px solid #e8c9c2; border-radius: 14px; padding: 16px; text-align: center; }
-  .pack.pop { border-color: #c9a24b; background: #fdf8ec; position: relative; }
-  .pack .pop-label { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #c9a24b; color: #fff; font-size: .72em; padding: 3px 10px; border-radius: 12px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
-  .pack .qty { font-weight: bold; color: #8e3b4d; }
-  .pack .price { font-size: 1.5em; font-weight: bold; color: #3d2b2b; }
-  .pack .save { color: #2e7d4f; font-size: .9em; }
-  .btn { display: block; width: 100%; max-width: 420px; margin: 22px auto 8px; background: #8e3b4d; color: #fff; text-align: center; padding: 15px 20px; border-radius: 30px; font-size: 1.1em; font-weight: bold; text-decoration: none; }
-  .btn.soon { background: #b08a8a; cursor: default; }
-  .guarantee { text-align: center; color: #2e7d4f; font-weight: bold; margin-top: 10px; }
-  .note { text-align: center; color: #6b4a4a; font-size: .92em; margin-top: 6px; }
-  .coming { background: #fff; border: 2px dashed #e8c9c2; border-radius: 18px; padding: 28px; text-align: center; color: #6b4a4a; }
-  .coming h3 { color: #8e3b4d; margin-bottom: 8px; }
-  footer { margin-top: 44px; border-top: 1px solid #e8c9c2; padding-top: 20px; font-size: .85em; color: #7a5a5a; }
-  footer p { margin-bottom: 10px; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; background: #fff; color: #33262a; line-height: 1.6; }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; color: #8e3b4d; }
+  .topbar { background: #8e3b4d; color: #fff; text-align: center; font-size: .88em; padding: 9px 14px; letter-spacing: .4px; }
+  .topbar b { color: #f3d98b; }
+  header { display: flex; align-items: center; justify-content: space-between; max-width: 1080px; margin: 0 auto; padding: 14px 20px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid #c9a24b; }
+  .brand .name { font-family: Georgia, serif; font-style: italic; font-size: 1.5em; color: #8e3b4d; line-height: 1.1; }
+  .brand .tag { font-size: .78em; color: #8a6a6a; letter-spacing: 2px; text-transform: uppercase; }
+  .nav-cta { background: #8e3b4d; color: #fff; text-decoration: none; font-weight: 700; padding: 11px 22px; border-radius: 30px; font-size: .95em; white-space: nowrap; }
+  .hero { background: linear-gradient(135deg, #fdeef0 0%, #fbe3e6 45%, #f7e8d5 100%); }
+  .hero-in { max-width: 1080px; margin: 0 auto; padding: 46px 20px 54px; display: flex; gap: 44px; align-items: center; flex-wrap: wrap; }
+  .hero-copy { flex: 1 1 420px; }
+  .eyebrow { display: inline-block; background: #fff; border: 1px solid #e8c9c2; color: #8e3b4d; font-size: .8em; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; }
+  .hero h1 { font-size: 2.7em; line-height: 1.12; margin: 16px 0 12px; }
+  .hero h1 em { color: #b98a2f; font-style: italic; }
+  .hero p.lead { font-size: 1.15em; color: #5a4148; margin-bottom: 20px; }
+  .hero-img { flex: 1 1 340px; text-align: center; }
+  .hero-img img { max-width: 100%; width: 420px; border-radius: 22px; box-shadow: 0 18px 44px rgba(142,59,77,.25); }
+  .cta { display: inline-block; background: #8e3b4d; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.12em; padding: 16px 34px; border-radius: 34px; box-shadow: 0 8px 22px rgba(142,59,77,.35); }
+  .cta.soon { background: #a98f8f; box-shadow: none; cursor: default; }
+  .cta-sub { font-size: .9em; color: #6b4a4a; margin-top: 10px; }
+  .trust { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; font-size: .92em; color: #5a4148; }
+  .trust span::before { content: "✓ "; color: #2e7d4f; font-weight: bold; }
+  section { max-width: 1080px; margin: 0 auto; padding: 54px 20px; }
+  section h2 { font-size: 2em; text-align: center; margin-bottom: 8px; }
+  .sec-sub { text-align: center; color: #6b4a4a; max-width: 640px; margin: 0 auto 34px; }
+  .grid3 { display: flex; gap: 18px; flex-wrap: wrap; }
+  .bcard { flex: 1 1 260px; background: #fdf6f3; border: 1px solid #f0d9d3; border-radius: 18px; padding: 26px; }
+  .bcard .ico { font-size: 2em; }
+  .bcard h3 { font-size: 1.25em; margin: 10px 0 6px; }
+  .bcard p { color: #5a4148; font-size: .97em; }
+  .inside { background: #fdf6f3; border-radius: 22px; padding: 34px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
+  .inside img { width: 220px; max-width: 100%; border-radius: 16px; box-shadow: 0 10px 26px rgba(142,59,77,.18); }
+  .inside ul { list-style: none; flex: 1 1 320px; }
+  .inside li { padding: 9px 0; border-bottom: 1px solid #f0d9d3; font-size: 1.02em; }
+  .inside li b { color: #8e3b4d; }
+  .inside li:last-child { border-bottom: none; }
+  .steps { display: flex; gap: 18px; flex-wrap: wrap; counter-reset: step; }
+  .step { flex: 1 1 240px; text-align: center; padding: 10px; }
+  .step .num { width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 50%; background: #8e3b4d; color: #fff; font-family: Georgia, serif; font-size: 1.5em; line-height: 52px; }
+  .step h3 { font-size: 1.15em; margin-bottom: 4px; }
+  .step p { color: #5a4148; font-size: .95em; }
+  .packs { display: flex; gap: 16px; flex-wrap: wrap; align-items: stretch; }
+  .pack { flex: 1 1 260px; border: 2px solid #e8c9c2; border-radius: 20px; padding: 28px 22px; text-align: center; background: #fff; display: flex; flex-direction: column; }
+  .pack.pop { border-color: #c9a24b; background: #fdf8ec; box-shadow: 0 12px 30px rgba(201,162,75,.22); transform: scale(1.02); }
+  .pack .pop-label { display: inline-block; background: #c9a24b; color: #fff; font-size: .72em; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 12px; margin-bottom: 12px; }
+  .pack .qty { font-family: Georgia, serif; font-size: 1.35em; color: #8e3b4d; }
+  .pack .price { font-size: 2.2em; font-weight: 800; margin: 6px 0 2px; }
+  .pack .per { color: #6b4a4a; font-size: .92em; }
+  .pack .save { color: #2e7d4f; font-weight: 700; margin: 8px 0 16px; }
+  .pack .btn { margin-top: auto; display: block; background: #8e3b4d; color: #fff; text-decoration: none; font-weight: 800; padding: 13px 18px; border-radius: 28px; }
+  .pack .btn.soon { background: #a98f8f; cursor: default; }
+  .guarantee { background: linear-gradient(135deg, #f3f9f2, #eaf4ea); border: 1px solid #cfe4cf; border-radius: 22px; padding: 34px; text-align: center; }
+  .guarantee .seal { font-size: 2.4em; }
+  .guarantee h2 { margin-bottom: 8px; }
+  .guarantee p { color: #4a5a4a; max-width: 620px; margin: 0 auto; }
+  .faq { max-width: 720px; margin: 0 auto; }
+  .faq details { border-bottom: 1px solid #f0d9d3; padding: 16px 4px; }
+  .faq summary { font-weight: 700; color: #8e3b4d; cursor: pointer; font-size: 1.05em; }
+  .faq p { color: #5a4148; margin-top: 8px; }
+  .final-cta { text-align: center; background: linear-gradient(135deg, #fdeef0, #f7e8d5); border-radius: 22px; padding: 44px 24px; }
+  .final-cta h2 { margin-bottom: 10px; }
+  .final-cta p { color: #5a4148; margin-bottom: 22px; }
+  .coming { text-align: center; color: #6b4a4a; border: 2px dashed #e8c9c2; border-radius: 18px; padding: 26px; margin-top: 40px; }
+  .coming h3 { margin-bottom: 6px; }
+  footer { background: #2e2226; color: #cbb9bd; font-size: .86em; }
+  footer .fin { max-width: 1080px; margin: 0 auto; padding: 34px 20px; }
+  footer p { margin-bottom: 12px; }
+  footer a { color: #f3d98b; text-decoration: none; }
+  .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #f0d9d3; padding: 10px 14px; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -4px 18px rgba(0,0,0,.08); z-index: 50; }
+  .sticky-cta .pr { font-weight: 800; color: #8e3b4d; }
+  .sticky-cta .pr small { display: block; font-weight: 400; color: #6b4a4a; font-size: .78em; }
+  .sticky-cta a { background: #8e3b4d; color: #fff; text-decoration: none; font-weight: 800; padding: 11px 20px; border-radius: 26px; font-size: .92em; white-space: nowrap; }
+  .sticky-cta a.soon { background: #a98f8f; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 2em; }
+    .nav-cta { display: none; }
+    .sticky-cta { display: flex; }
+    body { padding-bottom: 64px; }
+    .pack.pop { transform: none; }
+  }
 </style>
 </head>
 <body>
+
+<div class="topbar">✓ <b>90-Day Money-Back Guarantee</b> &nbsp;•&nbsp; Free shipping on 3 &amp; 6 bags &nbsp;•&nbsp; One-time payment — no subscription</div>
+
 <header>
-  <img src="logo.png" alt="aura beauty logo">
-  <h1>aura beauty</h1>
-  <p>Skincare &bull; Makeup &bull; Glow Routines</p>
-  <div class="social">
-    <a href="https://www.pinterest.com/BlushBloom395/">📌 Pinterest</a>
-    <a href="https://www.youtube.com/@blushbloom395">▶ YouTube</a>
-    <a href="https://www.facebook.com/profile.php?id=61596340029724">f Facebook</a>
-  </div>
-</header>
-
-<div class="wrap">
-  <h2>Products We Love</h2>
-  <p class="sub">Only products we have actually checked — no random lists, no hype. More are added as we verify them.</p>
-
-  <div class="card">
-    <img class="hero" src="product.jpg" alt="Advanced Collagen Plus multi-collagen powder">
-    <div class="card-body">
-      <span class="badge">Our #1 pick</span>
-      <h3>Advanced Collagen Plus</h3>
-      <p class="tagline">Multi-collagen powder for skin, hair &amp; nails</p>
-      <ul>
-        <li><strong>5 collagen types</strong> (I, II, III, V &amp; X) + biotin + chondroitin</li>
-        <li><strong>11 g collagen per scoop</strong> — unflavoured, mixes into coffee, smoothies or water</li>
-        <li>20 servings per bag — one scoop a day</li>
-        <li>Made for skin elasticity, hair strength and nail health</li>
-        <li>One-time payment — no subscription</li>
-      </ul>
-      <div class="packs">
-        <div class="pack">
-          <div class="qty">1 Bag</div>
-          <div class="price">$49.95</div>
-          <div>20 servings</div>
-        </div>
-        <div class="pack pop">
-          <span class="pop-label">Most Popular</span>
-          <div class="qty">3 Bags</div>
-          <div class="price">$134.85</div>
-          <div>$44.95 / bag &bull; <span class="save">Save $15.00</span></div>
-          <div>Free shipping</div>
-        </div>
-        <div class="pack">
-          <div class="qty">6 Bags</div>
-          <div class="price">$249.00</div>
-          <div>$41.50 / bag</div>
-          <div>Free shipping</div>
-        </div>
-      </div>
-      <a class="btn soon" href="#">Order link coming soon</a>
-      <p class="guarantee">✓ 90-day money-back guarantee</p>
-      <p class="note">Ships to USA, Canada, UK, Australia, New Zealand &amp; Ireland.</p>
+  <div class="brand">
+    <img src="logo.png" alt="aura beauty logo">
+    <div>
+      <div class="name">aura beauty</div>
+      <div class="tag">Skincare • Makeup • Glow</div>
     </div>
   </div>
+  <a class="nav-cta" href="#packs">Get Collagen Plus</a>
+</header>
 
-  <h2>More Coming Soon</h2>
-  <div class="coming">
-    <h3>We are testing more products</h3>
-    <p>Every product on this page is checked first — quality, freshness and whether it actually solves a real problem. New picks (skincare, hair care and makeup finds) will appear here as soon as they pass our check. Follow us on <a href="https://www.pinterest.com/BlushBloom395/">Pinterest</a> for daily ideas.</p>
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-copy">
+      <span class="eyebrow">Our #1 pick • Multi-Collagen Powder</span>
+      <h1>Glow From <em>Within.</em><br>Skin, Hair &amp; Nails — One Scoop a Day.</h1>
+      <p class="lead">Advanced Collagen Plus packs <strong>5 collagen types (I, II, III, V &amp; X) + biotin</strong> into one unflavoured scoop — 11&nbsp;g of collagen that stirs into your morning coffee, smoothie or water.</p>
+      <a class="cta soon" href="#packs">Get Advanced Collagen Plus — from $49.95</a>
+      <p class="cta-sub">Order link is being added — check back in a moment, or pick your pack below.</p>
+      <div class="trust">
+        <span>90-day guarantee</span>
+        <span>20 servings per bag</span>
+        <span>No subscription</span>
+        <span>Ships US, CA, UK, AU, NZ &amp; IE</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="product.jpg" alt="Advanced Collagen Plus multi-collagen powder">
+    </div>
   </div>
+</div>
 
-  <footer>
+<section>
+  <h2>Why Your Skin Will Thank You</h2>
+  <p class="sec-sub">Collagen is what keeps skin firm, hair strong and nails hard — and your body makes less of it as you age. One scoop a day helps top it back up.</p>
+  <div class="grid3">
+    <div class="bcard">
+      <div class="ico">✨</div>
+      <h3>Skin That Looks Cared For</h3>
+      <p>Types I &amp; III collagen support skin elasticity and hydration — the foundation of that healthy, lit-from-within glow.</p>
+    </div>
+    <div class="bcard">
+      <div class="ico">💇‍♀️</div>
+      <h3>Stronger Hair &amp; Nails</h3>
+      <p>Biotin + collagen work together to support hair strength and nails that chip less and grow better.</p>
+    </div>
+    <div class="bcard">
+      <div class="ico">🦴</div>
+      <h3>More Than Skin Deep</h3>
+      <p>Type II collagen + chondroitin support joints and cartilage too — beauty that starts from the inside, not just the surface.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>What's Inside Every Scoop</h2>
+  <p class="sec-sub">No fillers, no flavouring, no guessing. Just the good stuff.</p>
+  <div class="inside">
+    <img src="pouch.jpg" alt="Advanced Collagen Plus pouch">
+    <ul>
+      <li><b>Collagen Types I, II, III, V &amp; X</b> — five types, not one</li>
+      <li><b>11 g collagen per scoop</b> — a full, honest serving</li>
+      <li><b>Biotin</b> — for hair and nail support</li>
+      <li><b>Chondroitin</b> — for joint and cartilage support</li>
+      <li><b>Unflavoured</b> — mixes into anything, tastes like nothing</li>
+      <li><b>20 servings per bag</b> — one scoop a day</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>As Easy As Your Morning Coffee</h2>
+  <p class="sec-sub">No routine to learn. No pills to swallow. Three steps, thirty seconds.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Scoop</h3>
+      <p>One scoop into your mug, glass or shaker.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Stir</h3>
+      <p>Mix into coffee, tea, a smoothie or plain water.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Glow</h3>
+      <p>Repeat daily — consistency is what makes it work.</p>
+    </div>
+  </div>
+</section>
+
+<section id="packs">
+  <h2>Choose Your Pack</h2>
+  <p class="sec-sub">One-time payment. No subscription, no auto-billing. Every pack is covered by the 90-day guarantee.</p>
+  <div class="packs">
+    <div class="pack">
+      <div class="qty">1 Bag</div>
+      <div class="price">$49.95</div>
+      <div class="per">20 servings • $2.50 / day</div>
+      <div class="save">&nbsp;</div>
+      <a class="btn soon" href="#">Order link coming soon</a>
+    </div>
+    <div class="pack pop">
+      <span class="pop-label">Most Popular</span>
+      <div class="qty">3 Bags</div>
+      <div class="price">$134.85</div>
+      <div class="per">$44.95 / bag • 60 servings</div>
+      <div class="save">Save $15.00 + Free Shipping</div>
+      <a class="btn soon" href="#">Order link coming soon</a>
+    </div>
+    <div class="pack">
+      <div class="qty">6 Bags</div>
+      <div class="price">$249.00</div>
+      <div class="per">$41.50 / bag • 120 servings</div>
+      <div class="save">Best value + Free Shipping</div>
+      <a class="btn soon" href="#">Order link coming soon</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="guarantee">
+    <div class="seal">🛡️</div>
+    <h2>Try It for 90 Days — Risk Free</h2>
+    <p>If you don't love it, you're covered by a full 90-day money-back guarantee. No fine print games — if it's not for you, you get your money back.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Questions? Answered.</h2>
+  <p class="sec-sub">The honest answers, before you ask.</p>
+  <div class="faq">
+    <details>
+      <summary>How do I use it?</summary>
+      <p>One scoop a day, stirred into coffee, tea, a smoothie or water. It's unflavoured, so it won't change the taste of your drink.</p>
+    </details>
+    <details>
+      <summary>How fast will I see results?</summary>
+      <p>Everyone is different — consistency matters more than speed. Most people use it daily for several weeks before judging the change. There are no overnight miracles here, and we won't promise any.</p>
+    </details>
+    <details>
+      <summary>Is it a subscription?</summary>
+      <p>No. Every pack is a one-time payment. Nothing is billed again unless you choose to order more.</p>
+    </details>
+    <details>
+      <summary>Where does it ship?</summary>
+      <p>USA, Canada, UK, Australia, New Zealand and Ireland. Shipping is free on the 3-bag and 6-bag packs.</p>
+    </details>
+    <details>
+      <summary>What if it doesn't work for me?</summary>
+      <p>You're covered by the 90-day money-back guarantee.</p>
+    </details>
+    <details>
+      <summary>Is it safe while pregnant or on medication?</summary>
+      <p>Please ask your doctor first if you are pregnant, nursing, or taking medication.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="final-cta">
+    <h2>Your Glow Starts With One Scoop</h2>
+    <p>Skin, hair and nails — from the inside out. Pick your pack and start today.</p>
+    <a class="cta soon" href="#packs">Get Advanced Collagen Plus — from $49.95</a>
+    <p class="cta-sub">Order link is being added — check back in a moment.</p>
+  </div>
+  <div class="coming">
+    <h3>More products coming soon</h3>
+    <p>Every product on this page is checked first — quality, freshness and whether it actually solves a real problem. New picks will appear here as soon as they pass our check. Follow us on <a href="https://www.pinterest.com/BlushBloom395/">Pinterest</a> for daily ideas.</p>
+  </div>
+</section>
+
+<div class="sticky-cta">
+  <div class="pr">Advanced Collagen Plus<small>from $49.95 • 90-day guarantee</small></div>
+  <a class="soon" href="#packs">Get It Now</a>
+</div>
+
+<footer>
+  <div class="fin">
     <p><strong>Affiliate disclosure (#ad):</strong> Some links on this page are affiliate links. If you buy through them, aura beauty may earn a commission at no extra cost to you. We only list products we have checked ourselves.</p>
     <p><strong>Disclaimer:</strong> This page shares general beauty information, not medical advice. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. If you are pregnant, nursing, or taking medication, please ask your doctor first.</p>
-    <p>© 2026 aura beauty — Skincare, makeup &amp; glow routines for real skin.</p>
-  </footer>
-</div>
+    <p>© 2026 aura beauty — Skincare, makeup &amp; glow routines for real skin. &nbsp;•&nbsp; <a href="https://www.pinterest.com/BlushBloom395/">Pinterest</a> &nbsp;•&nbsp; <a href="https://www.youtube.com/@blushbloom395">YouTube</a> &nbsp;•&nbsp; <a href="https://www.facebook.com/profile.php?id=61596340029724">Facebook</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
